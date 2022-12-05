@@ -1,20 +1,17 @@
 import { jobs } from "../assets/shared/data.js"
 import JobDescription from "./JobDescription"
-import JobLanguage from "./JobLanguage.js"
+import "./JobContainer.css"
 
 
 const JobContainer = () => {
     return (
-        <>
+        <div className="listings-container">
             {jobs.map((job) => {
                 return (
-                    <>
-                        <JobDescription job={job} key={job.id} />
-                        <JobLanguage job={job} key={job.id} />
-                    </>
+                    <JobDescription job={job} key={job["id"]} />
                 )
             })}
-        </>
+        </div>
     )
 }
 

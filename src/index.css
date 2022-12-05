@@ -1,5 +1,18 @@
+@import url('https://fonts.googleapis.com/css2?family=League+Spartan&display=swap');
+
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    font-family: 'League Spartan', sans-serif;
+    --header-bg: hsl(180, 29%, 50%);
+    --primary-bg: hsl(180, 52%, 96%);
+    --filter-tabs: hsl(180, 31%, 95%);
+    --dk-primary: hsl(180, 29%, 50%);
+    --lt-neutral: hsl(180, 8%, 52%);
+    --dk-neutral: hsl(180, 14%, 20%);
+}
+
+body {
+    background: var(--primary-bg);
 }
