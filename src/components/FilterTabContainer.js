@@ -1,16 +1,15 @@
 import removeTabImg from "../assets/images/icon-remove.svg"
 
-const FilterTabContainer = ({ filters }) => {
+const FilterTabContainer = ({ filters, removeFilterItem }) => {
 
 
     return (
         <div className="filter-tab-container">
             {filters.map((item) => {
                 return (
-                    // todo add removeFilterItem
                     <div className="filter-tab" key= {item}>
                         <h3>{item}</h3>
-                        <img src={removeTabImg} alt="remove filter" />
+                        <img src={removeTabImg} alt="remove filter" onClick={removeFilterItem({item})} />
                     </div>
                 )
             })}

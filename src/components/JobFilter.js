@@ -1,4 +1,4 @@
-const JobFilter = ({ job,addFilterItem }) => {
+const JobFilter = ({ job, addFilterItem }) => {
 
     const { languages, tools, role, level } = job
 

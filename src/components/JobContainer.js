@@ -13,12 +13,17 @@ const JobContainer = () => {
         if (!filterArr.includes(Object.values(item)[0])) {
             setFilterArr(filterArr =>[...filterArr, Object.values(item)[0]])
         } 
+    }
+
+    const removeFilterItem = (item) => () => {
+        setFilterArr(filterarr => filterArr.filter((i) => i !== Object.values(item)[0]))
+        console.log(item)
         console.log(filterArr)
     }
 
     return (
         <div className="listings-container">
-            {filterArr.length > 0 && <FilterTabContainer filters={filterArr} />}
+            {filterArr.length > 0 && <FilterTabContainer filters={filterArr} removeFilterItem={removeFilterItem} />}
             {jobs.map((job) => {
                 return (
                 <div className={"description-container " + (job["featured"] ? "featured" : "")}>
