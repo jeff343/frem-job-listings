@@ -1,6 +1,6 @@
 const JobDescription = ({ job }) => {
 
-    const { logo, company, featured, position, postedAt, contract, languages, tools } = job
+    const { logo, company, featured, position, postedAt, contract, languages, tools, role, level } = job
     const newJob = job["new"]
     const jobLocation = job["location"]
 
@@ -27,15 +27,17 @@ const JobDescription = ({ job }) => {
                 </div>
             </div>
             <div className="desc-col">
-                <div className = "languages-container">
+                <div className = "filter-container">
+                <button className="filter-btn">{role}</button>
+                <button className="filter-btn">{level}</button>
                     {languages.map((x) => {
                         return (
-                            <button className="language-btn" key={x}>{x}</button>
+                            <button className="filter-btn" key={x}>{x}</button>
                         )
                     })}
                     {tools.map((x) => {
                         return (
-                            <button className="language-btn" key={x}>{x}</button>
+                            <button className="filter-btn" key={x}>{x}</button>
                         )
                     })}
                 </div>
