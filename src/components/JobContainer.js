@@ -2,6 +2,7 @@ import { jobs } from "../assets/shared/data.js"
 import { useState } from "react"
 import JobDescription from "./JobDescription"
 import JobFilter from "./JobFilter.js"
+import FilterTabContainer from "./FilterTabContainer.js"
 import "./JobContainer.css"
 
 const JobContainer = () => {
@@ -17,6 +18,7 @@ const JobContainer = () => {
 
     return (
         <div className="listings-container">
+            {filterArr.length > 0 && <FilterTabContainer filters={filterArr} />}
             {jobs.map((job) => {
                 return (
                 <div className={"description-container " + (job["featured"] ? "featured" : "")}>
