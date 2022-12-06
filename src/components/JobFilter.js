@@ -1,21 +1,21 @@
-const JobFilter = ({ job }) => {
+const JobFilter = ({ job,addFilterItem }) => {
 
-    const { languages, tools, role, level} = job
+    const { languages, tools, role, level } = job
 
 
     return (
         <div className="desc-col">
             <div className = "filter-container">
-                <button className="filter-btn" >{role}</button>
-                <button className="filter-btn">{level}</button>
-                {languages.map((x) => {
+                <button className="filter-btn" onClick={addFilterItem({role})}>{role}</button>
+                <button className="filter-btn" onClick={addFilterItem({level})}>{level}</button>
+                {languages.map((lang) => {
                     return (
-                        <button className="filter-btn" key={x}>{x}</button>
+                        <button className="filter-btn" key={lang} onClick={addFilterItem({lang})}>{lang}</button>
                     )
                 })}
-                {tools.map((x) => {
+                {tools.map((tool) => {
                     return (
-                        <button className="filter-btn" key={x}>{x}</button>
+                        <button className="filter-btn" key={tool} onClick={addFilterItem({tool})}>{tool}</button>
                     )
                 })}
             </div>
