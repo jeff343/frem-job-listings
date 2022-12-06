@@ -16,22 +16,31 @@ const JobContainer = () => {
     }
 
     const removeFilterItem = (item) => () => {
-        setFilterArr(filterarr => filterArr.filter((i) => i !== Object.values(item)[0]))
-        console.log(item)
-        console.log(filterArr)
+        setFilterArr(filterArr.filter((i) => i !== Object.values(item)[0]))
+    }
+
+    const filteredJobs = (job) => {
+        if (filterArr === 0) {
+            return job
+        } else {
+            const jobValues = Object.values(job).flat()
+            if (filterArr.every((item) => jobValues.includes(item))) {
+                return job
+            }
+        }
     }
 
     return (
         <div className="listings-container">
             {filterArr.length > 0 && <FilterTabContainer filters={filterArr} removeFilterItem={removeFilterItem} />}
-            {jobs.map((job) => {
-                return (
-                <div className={"description-container " + (job["featured"] ? "featured" : "")}>
-                    <JobDescription job={job} key={job["id"]} />
-                    <JobFilter job={job} key={job["id"] + 10} addFilterItem={addFilterItem} />
-                </div>
-                )
-            })}
+                {jobs.filter((job) => filteredJobs(job)).map((j) => {
+                    return (
+                        <div className={"description-container " + (j["featured"] ? "featured" : "")}>
+                            <JobDescription job={j} key={j["id"]} />
+                            <JobFilter job={j} key={j["id"] + 10} addFilterItem={addFilterItem} />
+                        </div>
+                    )
+                })}  
         </div>
     )
 }

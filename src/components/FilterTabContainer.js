@@ -7,8 +7,8 @@ const FilterTabContainer = ({ filters, removeFilterItem }) => {
         <div className="filter-tab-container">
             {filters.map((item) => {
                 return (
-                    <div className="filter-tab" key= {item}>
-                        <h3>{item}</h3>
+                    <div className="filter-tab" key= {Object.values(item)}>
+                        <h3>{Object.values(item)}</h3>
                         <img src={removeTabImg} alt="remove filter" onClick={removeFilterItem({item})} />
                     </div>
                 )
