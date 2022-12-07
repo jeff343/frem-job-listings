@@ -9,14 +9,16 @@ const FilterTabContainer = ({ filters, removeFilterItem, clearFilter }) => {
                 {filters.map((item) => {
                     return (
                         <div className="filter-tab" key= {Object.values(item)}>
-                            <h3>{Object.values(item)}</h3>
-                            <img src={removeTabImg} alt="remove filter" onClick={removeFilterItem({item})} />
+                            <span className="filter-item">{Object.values(item)}</span>
+                            <button className="remove-btn" onClick={removeFilterItem({item})}>
+                                <img src={removeTabImg} alt="remove filter"  />
+                            </button>
                         </div>
                     )
                 })}
             </div>
             <div className="filter-col">
-                <button className="clear" onClick={clearFilter}>Clear</button>
+                <button className="clear-btn" onClick={clearFilter}>Clear</button>
             </div>
         </div>
     )

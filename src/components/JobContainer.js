@@ -39,9 +39,9 @@ const JobContainer = () => {
             {filterArr.length > 0 && <FilterTabContainer filters={filterArr} removeFilterItem={removeFilterItem} clearFilter={clearFilter} />}
                 {jobs.filter((job) => filteredJobs(job)).map((j) => {
                     return (
-                        <div className={"description-container " + (j["featured"] ? "featured" : "")}>
-                            <JobDescription job={j} key={j["id"]} />
-                            <JobFilter job={j} key={j["id"]} addFilterItem={addFilterItem} />
+                        <div className={"description-container " + (j["featured"] ? "featured" : "")} key={j["id"]} >
+                            <JobDescription job={j} />
+                            <JobFilter job={j} addFilterItem={addFilterItem} />
                         </div>
                     )
                 })}  
