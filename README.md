@@ -14,7 +14,7 @@ This is a solution to the [Job listings with filtering challenge on Frontend Men
   - [Useful resources](#useful-resources)
 - [Author](#author)
 
-**Note: Delete this note and update the table of contents based on what sections you keep.**
+
 
 ## Overview
 
@@ -26,7 +26,7 @@ Users should be able to:
 - See hover states for all interactive elements on the page
 - Filter job listings based on the categories
 
-Included in the challenge from front end mentor were the mock ups of the finished site (everything in the design folder except the screenshots linked below), the style guide, the images im src/assets/images, and the data file in the src/assets/shared folder. 
+Included in the challenge from front end mentor were the mock ups of the finished site (everything in the design folder except the screenshots linked below), the style guide, the images in src/assets/images, and the data file in the src/assets/shared folder. 
 
 ### Screenshot
 
@@ -50,7 +50,7 @@ Working on this project I was able to get a good understanding of handling state
 
 ### Continued development
 
-For my future work I plan to pick projects that will require managing global state with React. I would like the get a better understaning of when to use different state management such as useState vs useReducer, and how to create and pass context through the app.
+For my future work I plan to pick projects that will require managing global state with React. I would like the get a better understanding of when to use different state management such as useState vs useReducer, and how to create and pass context through the app.
 
 ### Useful resources
 
@@ -59,4 +59,4 @@ For my future work I plan to pick projects that will require managing global sta
 
 ## Author
 
-
+- github - [@jeff343](https://github.com/jeff343)
