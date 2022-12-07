@@ -111,7 +111,7 @@
     background: white;
     box-sizing: border-box;
     border-radius: 3px;
-    margin: -120px 0 0 0;
+    margin: -120px 0 50px 0;
     box-shadow: 0px 8px 6px -6px var(--dk-primary);
     z-index: 1;
 }
@@ -124,6 +124,7 @@
     display: block;
     background: var(--filter-tabs);
     color: var(--dk-primary);
+    width: fit-content;
     font-weight: 600;
     border: none;
     border-radius: 5px;
@@ -212,6 +213,17 @@
 
     .filter-btn {
         margin: 20px 20px 20px 0;
+    }
+
+    .filter-display-container {
+        max-width: 500px;
+        margin: -120px auto 50px ;
+    }
+
+    .filter-col {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        row-gap: 20px;
     }
 }
 
