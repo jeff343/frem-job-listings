@@ -75,6 +75,11 @@
     color: var(--dk-neutral);
 }
 
+.position:hover {
+    cursor: pointer;
+    color: var(--dk-primary);
+}
+
 .desc-bullets {
     font-size: 16px;
     color: var(--lt-neutral);
@@ -99,6 +104,8 @@
 
 .filter-btn:hover {
     cursor: pointer;
+    background: var(--dk-primary);
+    color: white;
 }
 
 .filter-display-container {
@@ -149,6 +156,7 @@
 
 .remove-btn:hover {
     cursor: pointer;
+    background: var(--dk-neutral);
 }
 
 .remove-btn > img {
@@ -161,6 +169,7 @@
     border: none;
     background: none;
     color: var(--lt-neutral);
+    font-weight: 600;
 }
 
 .clear-btn:hover {
