@@ -19,6 +19,10 @@ const JobContainer = () => {
         setFilterArr(filterArr.filter((i) => i !== Object.values(item)[0]))
     }
 
+    const clearFilter = () => {
+        setFilterArr([])
+    }
+
     const filteredJobs = (job) => {
         if (filterArr === 0) {
             return job
@@ -32,12 +36,12 @@ const JobContainer = () => {
 
     return (
         <div className="listings-container">
-            {filterArr.length > 0 && <FilterTabContainer filters={filterArr} removeFilterItem={removeFilterItem} />}
+            {filterArr.length > 0 && <FilterTabContainer filters={filterArr} removeFilterItem={removeFilterItem} clearFilter={clearFilter} />}
                 {jobs.filter((job) => filteredJobs(job)).map((j) => {
                     return (
                         <div className={"description-container " + (j["featured"] ? "featured" : "")}>
                             <JobDescription job={j} key={j["id"]} />
-                            <JobFilter job={j} key={j["id"] + 10} addFilterItem={addFilterItem} />
+                            <JobFilter job={j} key={j["id"]} addFilterItem={addFilterItem} />
                         </div>
                     )
                 })}  

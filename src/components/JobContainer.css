@@ -101,11 +101,22 @@
     cursor: pointer;
 }
 
-.filter-tab-container {
+.filter-display-container {
     display: flex;
+    margin: auto;
     height: 200px;
-    width: 200px;
+    width: 75%;
 }
+
+/* .filter-tab-container {
+    background: var(--filter-tabs);
+    color: var(--dk-primary);
+    font-weight: 600;
+    border: none;
+    border-radius: 5px;
+    margin: 20px;
+    padding: 5px 10px;
+} */
 
 @media screen and (max-width: 1200px) {
     
