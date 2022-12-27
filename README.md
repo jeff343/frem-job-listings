@@ -7,6 +7,7 @@ This is a solution to the [Job listings with filtering challenge on Frontend Men
 - [Overview](#overview)
   - [The challenge](#the-challenge)
   - [Screenshot](#screenshot)
+  - [Link](#link)
 - [My process](#my-process)
   - [Built with](#built-with)
   - [What I learned](#what-i-learned)
@@ -26,12 +27,16 @@ Users should be able to:
 - See hover states for all interactive elements on the page
 - Filter job listings based on the categories
 
-Included in the challenge from front end mentor were the mock ups of the finished site (everything in the design folder except the screenshots linked below), the style guide, the images in src/assets/images, and the data file in the src/assets/shared folder. 
+Included in the challenge from front end mentor were the mockups of the finished site (everything in the design folder except the screenshots linked below), the style guide, the images in src/assets/images, and the data file in the src/assets/shared folder. 
 
 ### Screenshot
 
 ![desktop view](./src/design/desktop-screenshot.png)
 ![mobile view](./src/design/mobile-screenshot.png)
+
+### Link
+
+- Challenge Solution - [Job Listings](https://jeff343.github.io/frem-job-listings/)
 
 
 ## My process
@@ -46,11 +51,11 @@ Included in the challenge from front end mentor were the mock ups of the finishe
 
 ### What I learned
 
-Working on this project I was able to get a good understanding of handling state in a component, and passing information between child and parent components. I also learned how to manage state with different data types and structures when working with useState. 
+Working on this project I was able to get a good understanding of handling state in a component and passing information between child and parent components. I was able to manage and update state using different data types. For the filter function I would have preferred a dropdown menu to select the filter, but I chose to follow the UI and have the filters be selected by clicking on the tabs on the job listings.
 
 ### Continued development
 
-For my future work I plan to pick projects that will require managing global state with React. I would like the get a better understanding of when to use different state management such as useState vs useReducer, and how to create and pass context through the app.
+I plan on learning how to manage state in bigger projects using React. I would like the get a better understanding of when to use different state management such as useState vs useReducer, and how to create and pass context through the app.
 
 ### Useful resources
 
